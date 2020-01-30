@@ -55,7 +55,7 @@ class App extends Component {
       <div>
         <div className="container">
           <div className="row">
-            <div className="col-10 mx-auto col-md-8 mt-5">
+            <div className="col-8 mx-auto mt-5">
               <h3 className="text-center text-capitalize">task list</h3>
               <TaskInput
                 item={this.state.item}
@@ -64,14 +64,15 @@ class App extends Component {
                 editItem={this.state.editItem}
               />
             </div>
-
-            <TaskList
-              items={this.state.items}
-              clearList={this.clearList}
-              id={this.state.id}
-              handleDelete={this.handleDelete}
-              handleEdit={this.handleEdit}
-            />
+            <div className="col-8 mx-auto mt=5">
+              <TaskList
+                items={this.state.items}
+                clearList={this.clearList}
+                id={this.state.id}
+                handleDelete={this.handleDelete}
+                handleEdit={this.handleEdit}
+              />
+            </div>
           </div>
         </div>
       </div>
