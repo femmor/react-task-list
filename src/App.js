@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import uuid from "uuid";
 import "bootstrap/dist/css/bootstrap.min.css";
-// showing vs-code github setup
 
 // Components
 import TaskList from "./components/TaskList";
@@ -13,8 +12,13 @@ class App extends Component {
       <div>
         <div className="container">
           <div className="row">
-            <TaskInput />
-            <TaskList />
+            <div className="col">
+              <TaskInput />
+            </div>
+
+            <div className="col">
+              <TaskList />
+            </div>
           </div>
         </div>
       </div>
