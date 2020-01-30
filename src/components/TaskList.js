@@ -7,7 +7,7 @@ class TaskList extends Component {
     const { items, clearList, handleDelete, handleEdit } = this.props;
     return (
       <div>
-        <ul className="li-group my-5">
+        <ul className="list-group my-5">
           <h3 className="text-capitalize text-center">tasks</h3>
           {items.map(item => {
             return (
@@ -21,7 +21,7 @@ class TaskList extends Component {
           })}
           <button
             type="button"
-            className="btn btn-danger btn-block text-uppercase my-5"
+            className="btn btn-danger btn-block text-uppercase my-2"
             onClick={clearList}
           >
             clearlist

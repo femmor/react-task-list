@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./App.css";
 import uuid from "uuid";
 import "bootstrap/dist/css/bootstrap.min.css";
 
