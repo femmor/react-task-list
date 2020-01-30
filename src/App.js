@@ -32,6 +32,7 @@ class App extends Component {
   };
 
   handleSubmit = e => {
+    e.preventDefault();
     console.log("handle submit");
   };
 
