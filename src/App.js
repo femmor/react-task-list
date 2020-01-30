@@ -8,32 +8,34 @@ import TaskInput from "./components/TaskInput";
 
 class App extends Component {
   state = {
-    items: [
-      {
-        id: 1,
-        title: "Wake up"
-      },
-      {
-        id: 2,
-        title: "Make breakfast"
-      },
-      {
-        id: 3,
-        title: "Go to work"
-      }
-    ],
+    items: [],
     id: uuid(),
     item: "",
     editItem: false
   };
 
   handleChange = e => {
-    console.log("handle change");
+    this.setState({
+      item: e.target.value
+    });
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log("handle submit");
+
+    const newItem = {
+      id: this.state.id,
+      title: this.state.item
+    };
+
+    const updatedItems = [...this.state.items, newItem];
+
+    this.setState({
+      items: updatedItems,
+      item: "",
+      id: uuid(),
+      editItem: false
+    });
   };
 
   clearList = () => {
@@ -49,7 +51,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <div>
         <div className="container">
