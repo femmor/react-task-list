@@ -24,7 +24,7 @@ class TaskInput extends Component {
                 type="text"
                 name={item}
                 placeholder="type task here..."
-                className="form-control text-capitalize"
+                className="form-control"
                 value={item}
                 onChange={handleChange}
               />
