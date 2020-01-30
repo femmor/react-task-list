@@ -10,7 +10,13 @@ class TaskInput extends Component {
           <div className="form-group">
             <div className="input-group">
               <div className="input-group-prepend">
-                <div className="input-group-text bg-secondary">
+                <div
+                  className={
+                    editItem
+                      ? "input-group-text bg-success"
+                      : "input-group-text bg-primary"
+                  }
+                >
                   <i className="fas fa-book text-white"></i>
                 </div>
               </div>
@@ -25,10 +31,15 @@ class TaskInput extends Component {
             </div>
           </div>
           <button
-            className="btn btn-info btn-block text-capitalize"
             type="submit"
+            disabled={item ? false : true}
+            className={
+              editItem
+                ? "btn btn-success btn-block text-capitalize"
+                : "btn btn-primary btn-block text-capitalize"
+            }
           >
-            submit task
+            {editItem ? "edit task" : "submit task"}
           </button>
         </form>
       </div>
