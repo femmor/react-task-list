@@ -4,8 +4,8 @@ class TaskItem extends Component {
   render() {
     const { title, handleDelete, handleEdit } = this.props;
     return (
-      <li className="list-group-item my-2 d-flex justify-content-between">
-        <h6 className="text-capitalize">{title}</h6>
+      <li className="list-group-item my-2 d-flex justify-content-between text-capitalize">
+        <h6>{title}</h6>
         <div className="task-icons">
           <span className="mx-2" onClick={handleEdit}>
             <i className="fas fa-pen text-success"></i>
